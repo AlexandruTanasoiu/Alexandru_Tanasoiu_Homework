@@ -1,0 +1,37 @@
+.HW1 > .t1{
+    color: red;
+}
+
+.HW1  h2{
+    color: green;
+}
+
+.HW1 .mypara{
+    color:yellowgreen;
+}
+
+.HW2 .t1{
+    border: solid 5px blue;
+    border-radius: 20px;
+}
+
+.HW2 .mypara{
+    border: dotted 3px green
+}
+
+.HW3 .mypara{
+    width:300px;
+    height: 200px;
+    border: solid 5px green;
+}
+
+.HW4 ul {
+    background-color: red;
+    padding: 20px;
+    margin: 5px;
+}
+
+.HW4 li{
+    background-color: #ee7969;
+    margin:5px;
+}
