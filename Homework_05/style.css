@@ -65,21 +65,21 @@ footer div div{
     height: 1rem;
 }
 
-.div_profile {
+.profile_para {
     padding: 10px;
 }
 
-.div_profile img{
+.profile_para img{
     width: 15%;
     height: 15%;
     border-radius: 100%;
 }
 
-.div_profile p {
+.profile_para p {
     font-size: 18px;
 }
 
-.div_profile span{
+.profile_para span{
     font-weight: 700;
 }
 
