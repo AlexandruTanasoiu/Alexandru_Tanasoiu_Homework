@@ -1,0 +1,37 @@
+@use './variables' as v;
+@use './template' as temp;
+
+.sect3 {
+    @include temp.flex_col_center;
+    justify-content: start;
+    width: 99vw;
+    height: 60vh;
+    background-image: linear-gradient(to bottom, v.$s3_bg_color0, v.$s3_bg_color1);
+
+    &__title{
+        margin: 100px 0 80px 0;
+        font-size: v.$s1_title_size;
+        color: v.$s2_header_color;
+        font-weight: v.$weight2;
+        text-transform: uppercase;
+
+        &-divider{
+            text-decoration: underline;
+            text-decoration-color: v.$s2_divider_color;
+            text-underline-offset: 55px;
+            text-decoration-thickness: 3px;
+        }
+    }
+
+    &__cards{
+        @include temp.flex_row_center;
+        gap:50px;
+
+
+
+        &-img:hover{
+            transform: scale(v.$s3_scale_fact);
+            transition: transform v.$trans_dur;
+        }
+    }   
+}

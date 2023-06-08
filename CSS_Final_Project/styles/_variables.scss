@@ -1,5 +1,4 @@
-
-
+// general variables
 $font_family:'Hebbo', sans-serif;
 $general_size:20px;
 $weight1:300;
@@ -16,9 +15,14 @@ $s1_btn_color:#e858ae;
 $s1_wapp_color: #4caf50;
 $s1_title_size:55px;
 $s1_btn_size:15px;
+$s1_scale_fact: 1.3;
 
 // Section 2
-
 $s2_header_color:#9a0f98;
 $s2_divider_color: #e858ae;
 $s2_text_color: black;
+
+// Section 3
+$s3_bg_color0: #ffffff;
+$s3_bg_color1: #39065a;
+$s3_scale_fact:1.15;

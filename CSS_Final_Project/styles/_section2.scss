@@ -5,12 +5,12 @@
     @include temp.flex_col_center;
     justify-content: start;
     width: 99vw;
-    height: 100vh;
+    height: 80vh;
 
     &__title {
         margin: 150px 0 70px 0;
         font-size: v.$s1_title_size;
-        font-weight: v.$weight1;
+        font-weight: v.$weight2;
         text-transform: uppercase;
         color: v.$s2_header_color;
 
