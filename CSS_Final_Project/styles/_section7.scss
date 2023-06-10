@@ -1,0 +1,95 @@
+@use './variables' as v;
+@use './template' as temp;
+
+.sect7 {
+    @include temp.flex_col_center;
+    height: 600px;
+    justify-content: start;
+
+    &__title {
+        margin: 50px 0 80px 0;
+        font-size: v.$s1_title_size;
+        color: v.$s2_header_color;
+        text-transform: uppercase;
+        font-weight: v.$weight1;
+
+        &-divider {
+            text-decoration: underline;
+            text-decoration-color: v.$s2_divider_color;
+            text-underline-offset: 50px;
+            text-decoration-thickness: 3px;
+        }
+    }
+
+    &__cards {
+        @include temp.flex_row_center;
+        width: 70%;
+        gap: 20px;
+
+        &-content {
+            @include temp.flex_col_center;
+            background-image: linear-gradient(to bottom, v.$s7_bg_color0, v.$s7_bg_color1);
+            border: solid 2px v.$s7_border_color;
+            border-radius: 15px;
+            padding: 10px;
+            color: v.$s1_text_color;
+        }
+
+        &-title{            
+            font-weight: v.$weight1;
+        }
+
+        &-subtitle{
+            font-weight: v.$weight1;            
+        }
+
+        &-price{
+            color: v.$s7_price_color;            
+        }
+
+        &-link {
+            width: 180px;
+            color: v.$s1_text_color;
+            margin: 2px 0;
+
+            a {
+                text-decoration: none;
+                font-size: 14px;
+
+                &:visited {
+                    color: v.$s1_text_color;
+
+                }
+            }
+        }
+
+        &-suggestion{
+            color: v.$s7_recomend_color;
+            font-weight: v.$s7_recomend_weight;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+    }
+    
+    &__btn {
+        background-color: transparent;
+        border: none;
+        color: v.$s1_text_color;
+        margin: 10px 0;
+        font-size: v.$general_size;
+        padding: 5px;
+
+        &:hover{
+            border-radius: 10px 10px 0 0;
+            background-color: v.$s7_btn_hover_color;
+        }
+    }
+
+    &__card-large {
+        height: 300px;
+    }
+
+    &__btn-large{
+        margin-top: 32px;
+    }
+}

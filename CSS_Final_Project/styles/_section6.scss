@@ -2,7 +2,6 @@
 @use './template' as temp;
 
 .sect6 {
-    width: 99%;
     height: 600px;
     background-color: v.$s6_bg_color;
     @include temp.flex_col_center;

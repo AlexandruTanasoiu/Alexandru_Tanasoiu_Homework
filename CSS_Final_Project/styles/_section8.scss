@@ -1,0 +1,80 @@
+@use './variables' as v;
+@use './template' as temp;
+
+.sect8 {
+    height: 85vh;
+    @include temp.flex_col_center;
+    justify-content: start;
+
+    &__title {
+        color: v.$s2_header_color;
+        font-size: v.$s1_title_size;
+        margin: 30px 0 50px 0;
+
+        &-divider {
+            text-decoration: underline;
+            text-decoration-color: v.$s2_divider_color;
+            text-underline-offset: 25px;
+        }
+    }
+
+    &__content {
+        width: 90%;
+        @include temp.flex_row_center;
+        gap: 200px;
+        align-items: start;
+
+        &-form {
+            margin-top: 50px;
+            width: 34%;
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: 30px 30px 30px 200px 70px;
+            align-items: center;
+            row-gap: 5px;
+            column-gap: 5px;
+
+            label {
+                font-size: 16px;
+                text-align: right;
+            }
+        }
+
+        &-inputs {
+            border: solid 2px v.$s8_border_color;
+            color: black;            
+            height: 30px;
+            border-radius: 5px;
+            text-align: start;
+
+            &::placeholder {
+                color: v.$s8_border_color;
+            }
+        }
+
+        &-message {
+            height: 200px;           
+        }
+
+        &-btn {
+            grid-column: 1/3;
+            background-image: linear-gradient(to right, v.$s8_btn_bg_color0, v.$s8_btn_bg_color1);
+            margin:10px 80px 20px 280px;
+            height: 35px;
+            border: solid 2px v.$s2_divider_color;
+            border-radius: 20px;
+            font-weight: v.$weight2;
+
+            &:hover{
+                transform: scaleX(1.2);
+                transition: transform 0.5s;               
+            }
+
+            &:active{
+                transform: scaleX(1);
+            }
+        }
+    }
+
+
+}

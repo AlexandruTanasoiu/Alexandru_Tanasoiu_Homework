@@ -4,7 +4,6 @@
 .sect2 {
     @include temp.flex_col_center;
     justify-content: start;
-    width: 99vw;
     height: 800px;
 
     &__title {

@@ -4,7 +4,6 @@
 .sect3 {
     @include temp.flex_col_center;
     justify-content: start;
-    width: 99vw;
     height: 650px;      
     background-image: linear-gradient(to bottom, v.$s3_bg_color0, v.$s3_bg_color1);
 

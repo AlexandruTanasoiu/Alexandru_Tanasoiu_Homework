@@ -2,7 +2,6 @@
 @use './template' as temp;
 
 .sect5 {
-    width: 99vw;
     height: 600px;
     background-image: linear-gradient(to top, v.$s5_bg_color0, v.$s5_bg_color1);
     @include temp.flex_row_center;

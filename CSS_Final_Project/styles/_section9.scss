@@ -1,0 +1,41 @@
+@use './variables' as v;
+@use './template' as temp;
+
+.sect9 {
+    @include temp.flex_row_center;
+    background-color: v.$s9_bg_color;
+    color: white;
+    justify-content: space-around;
+    height: 80px;
+
+    &__pages {
+        width: 60%;
+        @include temp.flex_row_center;
+        justify-content: left;
+        gap: 120px;
+
+        ul {
+            @include temp.flex_row_center;
+            gap: 70px;
+            color: white;
+            list-style-type: none;
+
+            li {
+                text-decoration: none;
+            }
+        }
+
+        &-links {
+            text-decoration: none;
+
+            &:visited {
+                color: white;
+            }
+        }
+
+        &-social {
+            @include temp.flex_row_center;
+            gap: 22px;
+        }
+    }
+}
