@@ -1,0 +1,47 @@
+@use './variables' as v;
+@use './template' as temp;
+
+.sect5 {
+    width: 99vw;
+    height: 600px;
+    background-image: linear-gradient(to top, v.$s5_bg_color0, v.$s5_bg_color1);
+    @include temp.flex_row_center;
+    justify-content: space-around;
+
+    &__illustration:hover {
+        transform: scaleX(v.$s5_icon_hover_scale);
+        transition: transform v.$s5_dur;
+    }
+
+    &__content {
+        @include temp.flex_col_center;
+        color: v.$s1_text_color;
+
+        &-title {
+            font-weight: v.$weight1;
+            margin-bottom: 20px;
+        }
+
+        &-description {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 20px;
+            justify-content: space-between;
+            align-items: left;
+        }
+    }
+
+    &__description-card {
+        @include temp.flex_row_center;
+        align-items: left;
+        width: 80%;
+        gap: 20px;
+    }
+
+    &__description-icon:hover {
+        transform: scaleY(v.$s5_icon_hover_scale);
+        transition: transform v.$s5_dur;
+    }
+}

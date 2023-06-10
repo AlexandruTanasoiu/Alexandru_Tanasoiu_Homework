@@ -1,0 +1,83 @@
+@use './variables' as v;
+@use './template' as temp;
+
+.sect6 {
+    width: 99%;
+    height: 600px;
+    background-color: v.$s6_bg_color;
+    @include temp.flex_col_center;
+    justify-content: start;
+
+    &__title {
+        color: v.$s2_header_color;
+        text-transform: uppercase;
+        margin: 80px 0 70px 0;
+        font-size: v.$s1_title_size;
+        font-weight: v.$weight1;
+
+        &-divider {
+            text-decoration: underline;
+            text-decoration-color: v.$s2_divider_color;
+            text-underline-offset: 40px;
+            text-decoration-thickness: 3px;
+        }
+    }
+
+    &__content {
+        width: 80%;
+        @include temp.flex_row_center;
+        justify-content: space-around;
+        gap: 20px;
+
+        &-card {
+            width: 100%;
+            @include temp.flex_col_center;
+            align-items: end;
+            position: relative;
+            background-color: white;
+            border: solid 2px v.$s6_border_color;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px v.$s6_shadow_color;
+            padding: 20px;
+        }
+    }
+
+    &__card {
+        &-quote {
+            position: absolute;
+            top: 0;
+            right: 48%;
+            transform: translateY(-50%);
+            width: 35px;
+        }
+
+        &-title {
+            color: v.$s6_subhead_color;
+            margin-bottom: 10px;
+        }
+
+        &-description {
+            width: 100%;
+            padding-left: 10px;
+            text-align: right;
+        }
+
+        &-profile {
+            width: 100%;
+            @include temp.flex_row_center;
+            justify-content: left;
+            gap: 5px;
+            padding-left: 20px;
+
+            img {
+                width: 30px;
+            }
+
+            div {
+                @include temp.flex_col_center;
+                align-items: start;
+                height: 50px;
+            }
+        }
+    }
+}
