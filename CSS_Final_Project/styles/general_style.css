@@ -49,7 +49,7 @@
   padding-left: 200px;
 }
 .sect1__content-illustration {
-  width: 40%;
+  width: 35vw;
 }
 .sect1__content-illustration:hover {
   padding-top: 50px;
@@ -613,4 +613,61 @@
 body {
   font-family: "Hebbo", sans-serif;
   font-size: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sect1__nav ul {
+    justify-content: center;
+    margin-left: 10px;
+    gap: 20px;
+  }
+  .sect1__content {
+    padding-left: 100px;
+  }
+  .sect1__content-description {
+    padding-left: 10px;
+  }
+  .sect1__title {
+    font-size: 35px;
+  }
+  .sect1__action {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sect1__nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .sect1__nav ul {
+    width: 180px;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+  .sect1__nav ul li {
+    width: 100%;
+    border-bottom: solid 2px #e858ae;
+    padding-left: 10px;
+  }
+  .sect1__content-description {
+    width: 65%;
+    height: 40%;
+    justify-content: space-around;
+  }
+  .sect1__content-illustration {
+    display: none;
+  }
+  .sect1__title {
+    font-size: 25px;
+  }
+  .sect1__action {
+    width: 100%;
+    align-items: end;
+  }
+  .sect1 .wapp-icon {
+    top: 750px;
+    left: 40px;
+  }
 }/*# sourceMappingURL=general_style.css.map */
