@@ -53,7 +53,10 @@
 
 @media only screen and (max-width: 1000px) {
     .sect2 {
+        font-size: 16px;
+
         &__title {
+            margin-top: 50px;
             font-size: 30px;
         }
 
@@ -70,9 +73,9 @@
                 font-size: 20px;
             }
 
-            &-description {
-                font-size: 16px;
-            }
+            // &-description {
+            //     font-size: 16px;
+            // }
 
 
         }
@@ -80,9 +83,9 @@
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 480px) {
     .sect2 {
-        height: 1600px;
+        height: 1300px;
 
         &__cards {
             @include temp.flex_col_center;
@@ -91,16 +94,16 @@
 
         &__content {
             &-logo {
-                width: 40%;
+                width: 30%;
             }
 
             &-title {
                 font-size: 20px;
             }
 
-            &-description {
-                font-size: 16px;
-            }
+            // &-description {
+            //     font-size: 16px;
+            // }
         }
     }
 }

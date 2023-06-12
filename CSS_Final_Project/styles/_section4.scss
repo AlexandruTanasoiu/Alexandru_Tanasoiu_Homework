@@ -68,8 +68,20 @@
             transform: scaleY(-1);
             transition: transform v.$trans_dur;
         }
-
     }
+}
 
+@media only screen and (max-width:1000px){
+    .sect4{
+        height: 1500px;
+        justify-content: start;
+        &__title {
+            font-size: 30px;
+        }
 
+        &__cards{
+            height: 100%;
+            flex-direction: column;
+        }
+    }
 }

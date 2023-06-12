@@ -142,6 +142,11 @@
         &__action {
             flex-direction: column;
         }
+
+    }
+    .wapp-icon {
+        left: 50px;
+        bottom: 50px;
     }
 }
 
@@ -239,9 +244,10 @@
             align-items: end;
         }
 
-        .wapp-icon {
-            left: 50px;
-            bottom: 50px;
-        }
+        
+    }
+    .wapp-icon {
+        left: 25px;
+        bottom: 25px;
     }
 }

@@ -130,6 +130,10 @@
   .sect1__action {
     flex-direction: column;
   }
+  .wapp-icon {
+    left: 50px;
+    bottom: 50px;
+  }
 }
 @media only screen and (max-width: 480px) {
   .sect1__meniu-icon {
@@ -205,9 +209,9 @@
     width: 100%;
     align-items: end;
   }
-  .sect1 .wapp-icon {
-    left: 50px;
-    bottom: 50px;
+  .wapp-icon {
+    left: 25px;
+    bottom: 25px;
   }
 }
 .sect2 {
@@ -262,7 +266,11 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .sect2 {
+    font-size: 16px;
+  }
   .sect2__title {
+    margin-top: 50px;
     font-size: 30px;
   }
   .sect2__cards {
@@ -274,13 +282,10 @@
   .sect2__content-title {
     font-size: 20px;
   }
-  .sect2__content-description {
-    font-size: 16px;
-  }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 480px) {
   .sect2 {
-    height: 1600px;
+    height: 1300px;
   }
   .sect2__cards {
     display: flex;
@@ -290,13 +295,10 @@
     gap: 20px;
   }
   .sect2__content-logo {
-    width: 40%;
+    width: 30%;
   }
   .sect2__content-title {
     font-size: 20px;
-  }
-  .sect2__content-description {
-    font-size: 16px;
   }
 }
 .sect3 {
@@ -338,7 +340,7 @@
 
 @media only screen and (max-width: 1000px) {
   .sect3 {
-    height: 1450px;
+    height: 1550px;
   }
   .sect3__title {
     font-size: 35px;
@@ -438,6 +440,19 @@
   transition: transform 0.5s;
 }
 
+@media only screen and (max-width: 1000px) {
+  .sect4 {
+    height: 1500px;
+    justify-content: start;
+  }
+  .sect4__title {
+    font-size: 30px;
+  }
+  .sect4__cards {
+    height: 100%;
+    flex-direction: column;
+  }
+}
 .sect5 {
   height: 600px;
   background-image: linear-gradient(to top, #9c0ca1, #39065a);
