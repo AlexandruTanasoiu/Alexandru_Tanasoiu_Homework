@@ -80,3 +80,31 @@
         }
     }
 }
+
+@media only screen and (max-width:1000px) {
+    .sect6 {
+        height: 1000px;
+        font-size: 16px;
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__content {
+            flex-direction: column;
+            width: 60%;
+        }
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .sect6 {
+        height: 850px;
+&__title{
+    margin-top: 20px;
+}
+        &__content {
+            width: 80%;
+        }
+    }
+}

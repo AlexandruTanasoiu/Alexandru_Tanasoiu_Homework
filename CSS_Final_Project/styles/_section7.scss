@@ -93,3 +93,26 @@
         margin-top: 32px;
     }
 }
+@media only screen and (max-width:1000px){
+    .sect7{
+        font-size: 16px;
+        height: 1000px;
+
+        &__title{
+            font-size: 30px;
+        }
+
+        &__cards{
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (max-width:480px){
+    .sect7 {
+
+        &__title{
+            text-align: center;
+        }
+    }
+}

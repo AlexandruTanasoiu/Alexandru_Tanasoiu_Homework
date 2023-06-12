@@ -112,6 +112,7 @@
     border: 3px solid white;
     border-radius: 100%;
     background-color: v.$s1_wapp_color;
+    z-index: 3;
 
     &:hover {
         transform: scale(v.$s1_scale_fact);

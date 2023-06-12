@@ -7,9 +7,13 @@
     @include temp.flex_row_center;
     justify-content: space-around;
 
-    &__illustration:hover {
-        transform: scaleX(v.$s5_icon_hover_scale);
-        transition: transform v.$s5_dur;
+    &__illustration {
+        width: 25%;
+
+        &:hover {
+            transform: scaleX(v.$s5_icon_hover_scale);
+            transition: transform v.$s5_dur;
+        }
     }
 
     &__content {
@@ -42,5 +46,27 @@
     &__description-icon:hover {
         transform: scaleY(v.$s5_icon_hover_scale);
         transition: transform v.$s5_dur;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .sect5 {
+        flex-direction: column;
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (max-width:480px){
+    .sect5{
+        height: 500px;
+        font-size: 16px;
+        flex-direction: row;
+        align-items: start;
+        padding: 30px 20px;
+        gap:20px;
+
+        &__description-card{
+            flex-direction: column;
+        }
     }
 }
