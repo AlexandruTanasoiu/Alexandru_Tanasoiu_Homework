@@ -56,9 +56,12 @@
                 text-decoration: none;
                 font-size: 14px;
 
+                &:link{
+                    color:v.$s1_text_color;
+                }
+
                 &:visited {
                     color: v.$s1_text_color;
-
                 }
             }
         }

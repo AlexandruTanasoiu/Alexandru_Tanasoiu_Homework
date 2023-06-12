@@ -31,6 +31,10 @@
             a {
                 text-decoration: none;
 
+                &:link {
+                    color: v.$s1_text_color;
+                }
+
                 &:visited {
                     color: v.$s1_text_color;
                 }
@@ -145,6 +149,7 @@
         }
 
     }
+
     .wapp-icon {
         left: 50px;
         bottom: 50px;
@@ -245,8 +250,9 @@
             align-items: end;
         }
 
-        
+
     }
+
     .wapp-icon {
         left: 25px;
         bottom: 25px;

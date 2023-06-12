@@ -28,6 +28,10 @@
         &-links {
             text-decoration: none;
 
+            &:link {
+                color: v.$s1_text_color;
+            }
+
             &:visited {
                 color: white;
             }
