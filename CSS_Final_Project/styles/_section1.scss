@@ -2,34 +2,46 @@
 @use './template' as temp;
 
 .sect1 {
-    width: 100%;
+    width: 99%;
     height: 100vh;
     background-image: linear-gradient(to right, v.$s1_bg_color1, v.$s1_bg_color0);
     padding-top: 20px;
 
-    &__nav ul {
-        @include temp.flex_row_center;
-        list-style-type: none;
-        gap: 50px;
-        text-transform: uppercase;
-        color: v.$s1_text_color;
-        justify-content: left;
-        margin-left: 300px;
-        font-weight: v.$weight1;
+    &__meniu {
+        &-icon {
+            display: none;
+        }
 
-        a {
-            text-decoration: none;
+        &-btn {
+            display: none;
+        }
+    }
 
-            &:visited {
-                color: v.$s1_text_color;
-            }
+    &__nav {
+        ul {
+            @include temp.flex_row_center;
+            list-style-type: none;
+            gap: 50px;
+            text-transform: uppercase;
+            color: v.$s1_text_color;
+            justify-content: left;
+            margin-left: 300px;
+            font-weight: v.$weight1;
 
-            &:active {
-                border: 2px solid v.$s1_hov_color;
-            }
+            a {
+                text-decoration: none;
 
-            &:hover {
-                border: 2px solid v.$s1_hov_color;
+                &:visited {
+                    color: v.$s1_text_color;
+                }
+
+                &:active {
+                    border: 2px solid v.$s1_hov_color;
+                }
+
+                &:hover {
+                    border: 2px solid v.$s1_hov_color;
+                }
             }
         }
     }
@@ -48,7 +60,7 @@
         }
 
         &-illustration {
-            width:35vw;
+            width: 35vw;
 
             &:hover {
                 padding-top: 50px;
@@ -104,5 +116,132 @@
     &:hover {
         transform: scale(v.$s1_scale_fact);
         transition: transform v.$trans_dur;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .sect1 {
+        &__nav ul {
+            justify-content: center;
+            margin-left: 10px;
+            gap: 20px;
+        }
+
+        &__content {
+            padding-left: 100px;
+
+            &-description {
+                padding-left: 10px;
+            }
+        }
+
+        &__title {
+            font-size: 35px;
+        }
+
+        &__action {
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .sect1 {
+        &__meniu {
+            &-icon {
+                position: absolute;
+                @include temp.flex-row_center;
+                width: 45px;
+                height: 45px;
+                background-color: rgba(97, 13, 100, 0.3);
+                border-radius: 30px;
+                text-align: center;
+                z-index: 1;
+                right: 21px;
+
+                &:hover {}
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            &-btn {
+                display: block;
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                top: 25px;
+                right: 27px;
+                z-index: 2;
+                opacity: 0;
+
+                &:checked~.sect1 {
+                    &__nav {
+                        display: none;
+                    }
+
+                    &__content {
+                        height: 40%;
+                        padding-left: 100px;
+                    }
+
+
+                }
+
+                &:hover~.sect1__meniu-icon {
+                    background-color: rgba(193, 122, 196, 0.3);
+                }
+            }
+        }
+
+        &__nav {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+
+            ul {
+                width: 180px;
+                flex-direction: column;
+                gap: 5px;
+                align-items: start;
+
+                li {
+                    width: 100%;
+                    border-bottom: solid 2px v.$s2_divider_color;
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        &__content {
+            height: 60%;
+            padding-left: 30px;
+
+            &-description {
+                width: 80%;
+                height: 100%;
+                justify-content: space-between;
+            }
+
+            &-illustration {
+                display: none;
+            }
+        }
+
+        &__title {
+            font-size: 28px;
+            width: 75%;
+        }
+
+        &__action {
+            width: 100%;
+            align-items: end;
+        }
+
+        .wapp-icon {
+            left: 50px;
+            bottom: 50px;
+        }
     }
 }

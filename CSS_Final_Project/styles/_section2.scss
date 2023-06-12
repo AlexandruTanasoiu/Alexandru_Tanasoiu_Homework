@@ -50,3 +50,57 @@
     }
 
 }
+
+@media only screen and (max-width: 1000px) {
+    .sect2 {
+        &__title {
+            font-size: 30px;
+        }
+
+        &__cards {
+            gap: 20px;
+        }
+
+        &__content {
+            &-logo {
+                width: 70%;
+            }
+
+            &-title {
+                font-size: 20px;
+            }
+
+            &-description {
+                font-size: 16px;
+            }
+
+
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .sect2 {
+        height: 1600px;
+
+        &__cards {
+            @include temp.flex_col_center;
+            gap: 20px;
+        }
+
+        &__content {
+            &-logo {
+                width: 40%;
+            }
+
+            &-title {
+                font-size: 20px;
+            }
+
+            &-description {
+                font-size: 16px;
+            }
+        }
+    }
+}
