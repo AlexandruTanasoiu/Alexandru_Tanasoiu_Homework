@@ -1,14 +1,14 @@
 @use './variables' as v;
 @use './template' as temp;
-@use './section1' as s1;
-@use './section2' as s2;
-@use './section3' as s3;
-@use './section4' as s4;
-@use './section5' as s5;
-@use './section6' as s6;
-@use './section7' as s7;
-@use './section8' as s8;
-@use './section9' as s9;
+@use './section1';
+@use './section2';
+@use './section3';
+@use './section4';
+@use './section5';
+@use './section6';
+@use './section7';
+@use './section8';
+@use './section9';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;700;800&display=swap');
