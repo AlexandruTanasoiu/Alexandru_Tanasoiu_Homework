@@ -204,5 +204,15 @@ main {
     color: var(--Desaturated_blue);
     list-style-type: none;
     padding-left: 30px;
-    line-height: 30px;
+    line-height: 30px; 
+    cursor: pointer;   
 }
+
+.active_state{
+    font-weight: 700;
+    color: white;   
+    
+}
+
+
+
