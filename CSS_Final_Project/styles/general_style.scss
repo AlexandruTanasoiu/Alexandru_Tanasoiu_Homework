@@ -1,0 +1,37 @@
+@use './variables' as v;
+@use './template' as temp;
+@use './section1';
+@use './section2';
+@use './section3';
+@use './section4';
+@use './section5';
+@use './section6';
+@use './section7';
+@use './section8';
+@use './section9';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  
+    font-family: v.$font_family;
+    font-size: v.$general_size;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+

@@ -1,0 +1,91 @@
+@use './variables' as v;
+@use './template' as temp;
+
+.sect9 {
+    @include temp.flex_row_center;
+    background-color: v.$s9_bg_color;
+    color: white;
+    justify-content: space-around;
+    height: 80px;
+
+    &__pages {
+        width: 60%;
+        @include temp.flex_row_center;
+        justify-content: left;
+        gap: 120px;
+
+        ul {
+            @include temp.flex_row_center;
+            gap: 70px;
+            color: white;
+            list-style-type: none;
+
+            li {
+                text-decoration: none;
+            }
+        }
+
+        &-links {
+            text-decoration: none;
+
+            &:link {
+                color: v.$s1_text_color;
+            }
+
+            &:visited {
+                color: white;
+            }
+        }
+
+        &-social {
+            @include temp.flex_row_center;
+            gap: 22px;
+        }
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .sect9 {
+        height: 140px;
+        font-size: 16px;
+        flex-direction: column;
+        justify-content: start;
+
+        &__pages {
+            ul {
+                gap: 20px;
+            }
+
+            &-social {
+                margin-top: 10px;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .sect9 {
+        justify-content: start;
+
+        &__pages {
+
+            ul {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            &-social {
+                margin-top: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        h3 {
+            width: 90%;
+            font-size: 12px;
+            text-align: right;
+        }
+    }
+}

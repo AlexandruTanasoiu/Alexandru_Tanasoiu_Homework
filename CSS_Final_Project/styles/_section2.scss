@@ -1,0 +1,109 @@
+@use './variables' as v;
+@use './template' as temp;
+
+.sect2 {
+    @include temp.flex_col_center;
+    justify-content: start;
+    height: 800px;
+
+    &__title {
+        margin: 150px 0 70px 0;
+        font-size: v.$s1_title_size;
+        font-weight: v.$weight1;
+        text-transform: uppercase;
+        color: v.$s2_header_color;
+
+        &-divider {
+            text-decoration: underline;
+            text-underline-offset: 60px;
+            text-decoration-color: v.$s2_divider_color;
+            text-decoration-thickness: 3px;
+        }
+    }
+
+    &__description {
+        width: 54%;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__cards {
+        @include temp.flex_row_center;
+        width: 80%;
+        gap: 100px;
+
+        &-content {
+            @include temp.flex_col_center;
+        }
+    }
+
+    &__content-logo:hover {
+        transform: scaleX(-1);
+        transition: transform v.$trans_dur;
+    }
+
+    &__content-title {
+        color: v.$s2_header_color;
+        font-weight: v.$weight1;
+        text-transform: uppercase;
+        margin: 5px 0 20px 0;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .sect2 {
+        font-size: 16px;
+
+        &__title {
+            margin-top: 50px;
+            font-size: 30px;
+        }
+
+        &__cards {
+            gap: 20px;
+        }
+
+        &__content {
+            &-logo {
+                width: 70%;
+            }
+
+            &-title {
+                font-size: 20px;
+            }
+
+            // &-description {
+            //     font-size: 16px;
+            // }
+
+
+        }
+
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .sect2 {
+        height: 1300px;
+
+        &__cards {
+            @include temp.flex_col_center;
+            gap: 20px;
+        }
+
+        &__content {
+            &-logo {
+                width: 30%;
+            }
+
+            &-title {
+                font-size: 20px;
+            }
+
+            // &-description {
+            //     font-size: 16px;
+            // }
+        }
+    }
+}

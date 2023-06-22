@@ -1,0 +1,87 @@
+@use './variables' as v;
+@use './template' as temp;
+
+.sect4 {
+    @include temp.flex_col_center;
+    height: 800px;
+    margin-top: 70px;
+
+    &__title {
+        font-size: v.$s1_title_size;
+        font-weight: v.$weight1;
+        color: v.$s2_header_color;
+        text-transform: uppercase;
+        margin: 0 0 80px 0;
+
+        &-divider {
+            text-decoration: underline;
+            text-decoration-color: v.$s2_divider_color;
+            text-underline-offset: 50px;
+            text-decoration-thickness: 3px;
+        }
+    }
+
+    &__cards {
+        @include temp.flex_row_center;
+        justify-content: space-around;
+        width: 75%;
+        height: 50%;
+
+        &-content {
+            @include temp.flex_col_center;
+            width: 250px;
+            position: relative;
+
+            p {
+                margin-top: 7px;
+                border: dotted 2px v.$s4_border_color;
+                width: 200px;
+                text-align: center;
+                padding: 8px 10px 20px 10px;
+            }
+        }
+    }
+
+    &__card-number {
+        position: absolute;
+        @include temp.flex_col_center;
+        width: 50px;
+        height: 50px;
+        border: solid 2px v.$s4_border_color;
+        border-radius: 100%;
+        right: 55px;
+        top: -25px;
+        background-color: white;
+        color: v.$s4_number_color;
+        font-size: v.$s4_number_size;
+    }
+
+    &__card-logo {
+        @include temp.flex_col_center;
+        width: 180px;
+        height: 180px;
+        border-radius: 100%;
+        box-shadow: 2px 2px 10px v.$s4_shadow_disc_color;
+        background-image: linear-gradient(to bottom, v.$s4_bg_disc_color0, v.$s4_bg_disc_color1);
+
+        &:hover {
+            transform: scaleY(-1);
+            transition: transform v.$trans_dur;
+        }
+    }
+}
+
+@media only screen and (max-width:1000px){
+    .sect4{
+        height: 1500px;
+        justify-content: start;
+        &__title {
+            font-size: 30px;
+        }
+
+        &__cards{
+            height: 100%;
+            flex-direction: column;
+        }
+    }
+}
